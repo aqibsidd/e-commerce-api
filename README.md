@@ -60,6 +60,11 @@ These instructions will help you set up and run the project on your local machin
    PUT /cart?id=cartID: Update a cart by cartID.
    DELETE /cart?id=cartID: Delete a cart by cartId.
 
+   Impliment Products:-
+   
+  Implement search functionality for products you can search products by query.
+  Implement filtering and sorting options for retrievin gproducts you can filter by filterOptions and sort by sortOptions by query.
+
 
    Contributors:-
    Aqib Siddiqui
