@@ -3,7 +3,6 @@ let dotenv = require("dotenv")
 dotenv.config({ path: './.env' });
 const db = process.env.DATABASE
 
-// console.log('Starting')
 
 mongoose.connect(db, {
 
