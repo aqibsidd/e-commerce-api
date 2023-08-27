@@ -1,5 +1,3 @@
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const user = require('../models/user')
 const {generateToken}=require("../utils/generateToken");
@@ -10,20 +8,17 @@ const {
     resDocUpdated,
     resDocDeleted,
     resNotFound,
-    resInvalidToken,
+    resPasswordMismatch,
   } = require("../utils/response");
 
   
-  const comparePasswords = async (plainPassword, hashedPassword) => {
-    return bcrypt.compare(plainPassword, hashedPassword);
-  };
 
 
   let createUser = async (req, res) => {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return resPasswordMismatch(res,"please enter a valid password");
       }
       const { username, email, password } = req.body;
       const doc = await user.create({ username, email, password });

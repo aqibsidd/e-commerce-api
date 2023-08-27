@@ -26,6 +26,8 @@ These instructions will help you set up and run the project on your local machin
    Create a MongoDB database and get the connection URL.
    Open the config/db.js file and replace 'YOUR_MONGODB_CONNECTION_URL' with your actual MongoDB connection URL.
 
+   Add .env file in which database url localhost and port define
+   
    3. Start the server:
    npm start
 

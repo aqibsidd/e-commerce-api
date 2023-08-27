@@ -1,8 +1,5 @@
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const userController=require('../controllers/userController');
  
-  
 const verifyToken = (req, res, next) => {
     const token = req.header('token');
     if (!token) {

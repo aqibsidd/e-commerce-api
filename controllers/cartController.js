@@ -1,6 +1,4 @@
-
 const cart = require('../models/cart')
-const user = require('../models/user')
 const product = require('../models/product')
 const { 
   resFound,
